@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom'
 import './NavBar.css';
 
-function NavBar({ items, lastItem, line }) {
+function NavBar({ items=['one', 'two', 'tree'], lastItem=false, line=false }) {
 
     return (
         <div className="navBarContainer">
@@ -13,10 +13,10 @@ function NavBar({ items, lastItem, line }) {
                 <div className={"navBarElementContainer"}>
                     {items.map((item, i, arr) =>
                         i !== (arr.length - 1) ?
-                            <Link to="/" className="navBarItem">
-                                <div className="navBarText" key={i}>{item}</div>
+                            <Link to="/" className="navBarItem" key={i}>
+                                <div className="navBarText">{item}</div>
                             </Link>
-                            : <div></div>
+                            : <div key={i}></div>
                     )}
                 </div>
                 <div className="navBarElementContainer">
