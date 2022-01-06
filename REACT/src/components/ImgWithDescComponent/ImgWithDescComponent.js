@@ -7,7 +7,8 @@ function ImgWithDescComponent({image, description, btnTxt, icon}) {
 
     const Icon = icon;
     const CustomButton = styled(Button) ({
-        textTransform: 'none'
+        textTransform: 'none',
+        backgroundColor: '#0A66C2'
     })
 
     return (
@@ -19,7 +20,7 @@ function ImgWithDescComponent({image, description, btnTxt, icon}) {
                 <p className="desc">{description}</p>
             </div>
             <div className="btn-container">
-                <CustomButton className="btn" variant="contained" endIcon={<Icon/>}>{btnTxt}</CustomButton>
+                <CustomButton className="btn" variant="contained"  endIcon={<Icon/>}>{btnTxt}</CustomButton>
             </div>
         </div>
     )

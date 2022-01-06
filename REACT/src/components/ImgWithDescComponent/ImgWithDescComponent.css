@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    max-width: 350px;
+    margin: 20px;
+    box-sizing: border-box;
+}
+
+.img-container {
+    border: solid #e4e4e4 1px;
+    border-radius: 50%;
+    height: 170px;
+    width: 170px;
+}
+
+.img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.desc-container {
+    text-align: justify;
+}
+

@@ -16,10 +16,10 @@ function MainScreen() {
 
     const myDescription =
         `
-    I\'m a graduated Software Engeniering student who resides in Quito, Ecuador. 
-    I always like to be up to date in new technologies and now I\'m interested in web. 
-    I know javascript, typescript and React. Also Flutter in mobile.
-    I'm also interested in web design, advertising, pop culture and videogames.
+    I\'m a graduated Software Engeniering student who resides in Quito, Ecuador 🌎. 
+    I always like to be up to date in new technologies 💻. Now I\'m interested in web dev 🕸️. 
+    I know javascript, typescript and React. Also Flutter in mobile 📱.
+    I'm also interested in web design, advertising, pop culture and videogames 🎮.
     `
 
     return (
@@ -27,21 +27,21 @@ function MainScreen() {
             <div style={{ display: 'flex', flexDirection: 'column', height: '100vh', backgroundColor: 'rgb(53, 53, 53)' }}>
                 <div>
                     <NavBar
-                        items={['Me', 'Work', 'Contacts', 'Blog']}
+                        items={['Me', 'Work', 'Contact', 'Blog']}
                         lastItem={true}
-                        line={true}
+                        line={false}
                     ></NavBar>
                 </div>
-                <div style={{ display: "flex", flexDirection: window.innerWidth > 768 ? "row" : "column", height: "100%", padding: "40px" }}>
-                    <div style={{ flex: "2", display: "flex", justifyContent: "center", alignItems: "center" }}>
+                <div style={{ display: "flex", flexDirection: window.innerWidth > 768 ? "row" : "column", height: "100%", padding: "0 20px 20px 0"}}>
+                    <div style={{ flex: "2", display: "flex", justifyContent: "center", alignItems: "center", backgroundColor: "white", borderBottomRightRadius: "50px", borderTopRightRadius: "50px" }}>
                         <MessageComponent
-                            message="Hi!, I'm a software developer specialiced in web and mobile apps. I created this site so you can have an idea of who am I and something about my job."
+                            message="Hi, I'm a software dev specialiced in web and mobile apps </>... and this is my website!"
                         ></MessageComponent>
                     </div>
-                    <div style={{ flex: "1", display: "flex", flexDirection:'column', alignItems: "center", justifyContent: window.innerWidth > 768 ? "center" : "flex-end" }}>
-                        <div style={{width: "100%", textAlign: "start"}}>
+                    <div style={{ flex: "1", display: "flex", flexDirection:'column', alignItems: "center", justifyContent: window.innerWidth > 768 ? "center" : "flex-end", borderTopLeftRadius: "50px", backgroundColor: 'rgb(53, 53, 53)' }}>
+                        <div style={{width: "100%", textAlign: "center"}}>
                             <TitleComponent
-                                title={'Follow me:'}
+                                title={'My social media:'}
                                 italics={true}
                                 color={'white'}
                             ></TitleComponent>
@@ -55,14 +55,43 @@ function MainScreen() {
                                 <Avatar sx={{ bgcolor: 'white' }}><ShareIcon sx={{ color: 'rgb(53, 53, 53)' }} /></Avatar>
                             </Stack>
                         </div>
-                        <div></div>
                     </div>
                 </div>
             </div>
             <div style={{ height: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%', padding: '20px', boxSizing: 'border-box' }}>
                 <div style={{width: '100%'}}>
                     <TitleComponent
-                        title={'This is me'}
+                        title={'About me'}
+                    ></TitleComponent>
+                </div>
+                <div style={{flex:'1', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+                    <ImgWithDescComponent
+                        btnTxt={'Check my profile!'}
+                        description={myDescription}
+                        image={Coding}
+                        icon={LinkedInIcon}
+                    ></ImgWithDescComponent>
+                </div>
+            </div>
+            <div style={{ height: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%', padding: '20px', boxSizing: 'border-box' }}>
+                <div style={{width: '100%'}}>
+                    <TitleComponent
+                        title={'Previous work'}
+                    ></TitleComponent>
+                </div>
+                <div style={{flex:'1', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+                    <ImgWithDescComponent
+                        btnTxt={'Check my profile!'}
+                        description={myDescription}
+                        image={Coding}
+                        icon={LinkedInIcon}
+                    ></ImgWithDescComponent>
+                </div>
+            </div>
+            <div style={{ height: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%', padding: '20px', boxSizing: 'border-box' }}>
+                <div style={{width: '100%'}}>
+                    <TitleComponent
+                        title={'Contact me'}
                     ></TitleComponent>
                 </div>
                 <div style={{flex:'1', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
