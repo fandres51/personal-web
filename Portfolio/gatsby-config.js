@@ -6,7 +6,26 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [],
+  plugins: [
+    // {
+    //   resolve: `gatsby-transformer-remark`,
+    //   options: {
+    //     // Footnotes mode (default: true)
+    //     footnotes: true,
+    //     // GitHub Flavored Markdown mode (default: true)
+    //     gfm: true,
+    //     // Plugins configs
+    //     plugins: [],
+    //   },
+    // },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `blogs`,
+        path: `${__dirname}/src/blogs/`,
+      },
+    },
+  ],
   siteMetadata: {
     title: 'Fabio',
     description: 'Portfolio'
