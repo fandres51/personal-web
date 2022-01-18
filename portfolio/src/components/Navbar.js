@@ -1,4 +1,5 @@
 import { Link, graphql, useStaticQuery } from 'gatsby'
+import * as styles from '../styles/navbar.module.css'
 import React from 'react'
 
 export default function Navbar() {
@@ -15,7 +16,7 @@ export default function Navbar() {
     const { title } = data.site.siteMetadata
 
     return (
-        <nav>
+        <nav className={styles.nav}>
             <h1>{ title }</h1>
             <div className="links">
                 <Link to="/">Home</Link>

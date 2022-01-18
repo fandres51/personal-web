@@ -1,0 +1,22 @@
+.nav {
+  margin: 40px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav .links {
+  display: inline-block;
+  text-align: right;
+}
+.nav a {
+  padding-top: 15px;
+  display: inline-block;
+  margin-left: 20px;
+  font-weight: 400;
+  padding-bottom: 8px;
+  border-bottom: 3px solid transparent;
+}
+.nav a:hover {
+  border-color: white;
+}
